@@ -59,17 +59,22 @@ def main():
             if direction not in ["North", "South", "East", "West"]:
                 print("That is not a valid direction. "
                       "Use North, South, East, or West.\n")
+                
             else:
+
                 # Decision branching for move between rooms
                 if direction in rooms[current_room]:
                     new_room = rooms[current_room][direction]
                     print("You go", direction, "and enter the", new_room + ".\n")
                     current_room = new_room
+                    
                 else:
                     print("You cannot go that way from the", current_room + ".\n")
+
         else:
             # Other (invalid) command
             print("Invalid move. Use 'go <direction>' or 'exit' .\n")
+
     # Exit path after loop ends
     print("Thanks for playing the game. Hope you enjoyed it.")
 
